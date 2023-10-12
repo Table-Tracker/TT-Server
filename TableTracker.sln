@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TT.Notifications", "Service
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TT.Payment", "Services\Payment\src\TT.Payment\TT.Payment.csproj", "{AD80423F-7AC9-4C79-BEAA-FE42DEE754F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TT.Payment", "Services\Profiles\src\TT.Payment\TT.Payment.csproj", "{C2805B0B-A924-4A0C-B7ED-CEC00B55A868}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TT.Profiles", "Services\Profiles\src\TT.Profiles\TT.Profiles.csproj", "{C2805B0B-A924-4A0C-B7ED-CEC00B55A868}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TT.Reporting", "Services\Reporting\src\TT.Reporting\TT.Reporting.csproj", "{54FEF0CE-780D-437C-A5F9-C46828DECA46}"
 EndProject
@@ -46,7 +46,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_Solution
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TT.Chat.Domain", "Services\Chat\src\TT.Chat.Domain\TT.Chat.Domain.csproj", "{25C51581-8837-4DE0-9303-445DB46CAD69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TT.Chat.Domain", "Services\Chat\src\TT.Chat.Domain\TT.Chat.Domain.csproj", "{25C51581-8837-4DE0-9303-445DB46CAD69}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TT.Chat.Application", "Services\Chat\src\TT.Chat.Application\TT.Chat.Application.csproj", "{A8DFEB1F-D3A9-468D-8C36-8DDD5945EC8C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TT.Chat.Infrastructure", "Services\Chat\src\TT.Chat.Infrastructure\TT.Chat.Infrastructure.csproj", "{7C943306-C022-4B59-A50D-4EBDA8CB0B96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,6 +98,14 @@ Global
 		{25C51581-8837-4DE0-9303-445DB46CAD69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25C51581-8837-4DE0-9303-445DB46CAD69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25C51581-8837-4DE0-9303-445DB46CAD69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8DFEB1F-D3A9-468D-8C36-8DDD5945EC8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8DFEB1F-D3A9-468D-8C36-8DDD5945EC8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8DFEB1F-D3A9-468D-8C36-8DDD5945EC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8DFEB1F-D3A9-468D-8C36-8DDD5945EC8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C943306-C022-4B59-A50D-4EBDA8CB0B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C943306-C022-4B59-A50D-4EBDA8CB0B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C943306-C022-4B59-A50D-4EBDA8CB0B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C943306-C022-4B59-A50D-4EBDA8CB0B96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +130,8 @@ Global
 		{95BAE11A-2A24-459B-846A-622ED4E81965} = {AF27DF0D-FAB9-46B8-ACFA-F2AFD3D99302}
 		{612961D2-DFF6-444D-A5D8-1E9A96B19F90} = {303B72DA-93C5-4ABE-B9B2-AE9433EF5867}
 		{25C51581-8837-4DE0-9303-445DB46CAD69} = {E44A5FEC-029D-4E67-9ECD-08B9F5F3D467}
+		{A8DFEB1F-D3A9-468D-8C36-8DDD5945EC8C} = {E44A5FEC-029D-4E67-9ECD-08B9F5F3D467}
+		{7C943306-C022-4B59-A50D-4EBDA8CB0B96} = {E44A5FEC-029D-4E67-9ECD-08B9F5F3D467}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E093571D-5F8C-4D97-915F-EBFB2ACC6198}
