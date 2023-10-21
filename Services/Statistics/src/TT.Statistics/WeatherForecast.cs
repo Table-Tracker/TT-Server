@@ -1,3 +1,5 @@
+using System;
+
 namespace TT.Statistics;
 
 public class WeatherForecast

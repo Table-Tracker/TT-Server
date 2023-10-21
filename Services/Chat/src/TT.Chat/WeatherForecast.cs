@@ -1,3 +1,5 @@
+using System;
+
 namespace TT.Chat;
 
 public class WeatherForecast

@@ -6,4 +6,8 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TT.Chat.Application\TT.Chat.Application.csproj" />
+  </ItemGroup>
+
 </Project>
