@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+using TT.Restaurant.Configurations;
+
 namespace TT.Restaurant;
 
 public class Program
@@ -21,6 +23,8 @@ public class Program
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+
+        builder.Services.AddDataAccess(builder.Configuration);
 
         var app = builder.Build();
 
