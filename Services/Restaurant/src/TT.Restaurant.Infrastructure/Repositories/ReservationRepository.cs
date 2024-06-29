@@ -17,8 +17,13 @@ internal class ReservationRepository : IReservationRepository, IDisposable
         _context = context;
     }
 
+    /// <inheritdoc/>
     public async Task AddAsync(Reservation entity) => await _context.Reservations.AddAsync(entity);
+
+    /// <inheritdoc/>
     public void Delete(Reservation entity) => _context.Reservations.Remove(entity);
+
+    /// <inheritdoc/>
     public void DeleteById(Guid id)
     {
         var reservation = _context.Reservations.Find(id);
@@ -29,7 +34,10 @@ internal class ReservationRepository : IReservationRepository, IDisposable
         }
     }
 
+    /// <inheritdoc/>
     public async Task<IEnumerable<Reservation>> GetAllAsync() => await _context.Reservations.ToListAsync();
+
+    /// <inheritdoc/>
     public async Task<Reservation?> GetByIdAsync(Guid id)
     {
         var reservation = await _context.Reservations.FindAsync(id);
@@ -37,8 +45,13 @@ internal class ReservationRepository : IReservationRepository, IDisposable
         return reservation;
     }
 
+    /// <inheritdoc/>
     public void Save() => _context.SaveChanges();
+
+    /// <inheritdoc/>
     public async Task SaveAsync() => await _context.SaveChangesAsync();
+
+    /// <inheritdoc/>
     public Reservation? Update(Reservation entity)
     {
         _context.Reservations.Update(entity);

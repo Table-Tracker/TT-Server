@@ -17,8 +17,13 @@ internal class MenuSectionRepository : IMenuSectionRepository, IDisposable
         _context = context;
     }
 
+    /// <inheritdoc/>
     public async Task AddAsync(MenuSection entity) => await _context.MenuSections.AddAsync(entity);
+
+    /// <inheritdoc/>
     public void Delete(MenuSection entity) => _context.MenuSections.Remove(entity);
+
+    /// <inheritdoc/>
     public void DeleteById(Guid id)
     {
         var section = _context.MenuSections.Find(id);
@@ -28,15 +33,24 @@ internal class MenuSectionRepository : IMenuSectionRepository, IDisposable
             _context.MenuSections.Remove(section);
         }
     }
+
+    /// <inheritdoc/>
     public async Task<IEnumerable<MenuSection>> GetAllAsync() => await _context.MenuSections.ToListAsync();
+
+    /// <inheritdoc/>
     public async Task<MenuSection?> GetByIdAsync(Guid id)
     {
         var section = await _context.MenuSections.FindAsync(id);
         return section;
     }
 
+    /// <inheritdoc/>
     public void Save() => _context.SaveChanges();
+
+    /// <inheritdoc/>
     public async Task SaveAsync() => await _context.SaveChangesAsync();
+
+    /// <inheritdoc/>
     public MenuSection? Update(MenuSection entity)
     {
         _context.MenuSections.Update(entity);
