@@ -10,6 +10,7 @@ public class RestaurantContext : DbContext
     public DbSet<Franchise> Franchises { get; set; }
     public DbSet<Map> Maps { get; set; }
     public DbSet<MenuItem> MenuItems { get; set; }
+    public DbSet<MenuSection> MenuSections { get; set; }
     public DbSet<Reservation> Reservations { get; set; }
     public DbSet<Restaurant.Domain.Models.Restaurant> Restaurants { get; set; }
     public DbSet<Table> Tables { get; set; }
