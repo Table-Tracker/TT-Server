@@ -17,9 +17,14 @@ internal class MapRepository : IMapRepository, IDisposable
         _context = context;
     }
 
+    /// <inheritdoc/>
     public async Task AddAsync(Map entity) => await _context.Maps.AddAsync(entity);
+
+    /// <inheritdoc/>
     public void Delete(Map entity) => _context.Maps?.Remove(entity);
-    public void DeleteByIdAsync(Guid id)
+
+    /// <inheritdoc/>
+    public void DeleteById(Guid id)
     {
         var map = _context.Maps.Find(id);
 
@@ -29,7 +34,10 @@ internal class MapRepository : IMapRepository, IDisposable
         }
     }
 
+    /// <inheritdoc/>
     public async Task<IEnumerable<Map>> GetAllAsync() => await _context.Maps.ToListAsync();
+
+    /// <inheritdoc/>
     public async Task<Map?> GetByIdAsync(Guid id)
     {
         var map = await _context.Maps.FindAsync(id);
@@ -37,8 +45,13 @@ internal class MapRepository : IMapRepository, IDisposable
         return map;
     }
 
+    /// <inheritdoc/>
     public void Save() => _context.SaveChanges();
+
+    /// <inheritdoc/>
     public async Task SaveAsync() => await _context.SaveChangesAsync();
+
+    /// <inheritdoc/>
     public Map? Update(Map entity)
     {
         _context.Maps.Update(entity);

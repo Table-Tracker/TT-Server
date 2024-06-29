@@ -30,10 +30,14 @@ public class TableRepository : ITableRepository, IDisposable
         disposed = true;
     }
 
+    /// <inheritdoc/>
     public async Task AddAsync(Table entity) => await _context.Tables.AddAsync(entity);
+
+    /// <inheritdoc/>
     public void Delete(Table entity) => _context.Tables.Remove(entity);
 
-    public void DeleteByIdAsync(Guid id)
+    /// <inheritdoc/>
+    public void DeleteById(Guid id)
     {
         var table = _context.Tables.Find(id);
 
@@ -43,16 +47,23 @@ public class TableRepository : ITableRepository, IDisposable
         }
     }
 
+    /// <inheritdoc/>
     public async Task<IEnumerable<Table>> GetAllAsync() => await _context.Tables.ToListAsync();
+
+    /// <inheritdoc/>
     public async Task<Table?> GetByIdAsync(Guid id)
     {
         var table = await _context.Tables.FindAsync(id);
         return table;
     }
+
+    /// <inheritdoc/>
     public async Task SaveAsync() => await _context.SaveChangesAsync();
 
+    /// <inheritdoc/>
     public void Save() => _context.SaveChanges();
 
+    /// <inheritdoc/>
     public Table? Update(Table entity)
     {
         _context.Tables.Update(entity);

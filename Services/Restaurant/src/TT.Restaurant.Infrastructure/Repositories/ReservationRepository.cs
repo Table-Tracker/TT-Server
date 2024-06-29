@@ -19,7 +19,7 @@ internal class ReservationRepository : IReservationRepository, IDisposable
 
     public async Task AddAsync(Reservation entity) => await _context.Reservations.AddAsync(entity);
     public void Delete(Reservation entity) => _context.Reservations.Remove(entity);
-    public void DeleteByIdAsync(Guid id)
+    public void DeleteById(Guid id)
     {
         var reservation = _context.Reservations.Find(id);
 

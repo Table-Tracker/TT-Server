@@ -17,9 +17,14 @@ internal class FranchiseRepository : IFranchiseRepository, IDisposable
         _context = context;
     }
 
+    /// <inheritdoc/>
     public async Task AddAsync(Franchise entity) => await _context.Franchises.AddAsync(entity);
+
+    /// <inheritdoc/>
     public void Delete(Franchise entity) => _context.Franchises.Remove(entity);
-    public void DeleteByIdAsync(Guid id)
+
+    /// <inheritdoc/>
+    public void DeleteById(Guid id)
     {
         var franchise = _context.Franchises.Find(id);
 
@@ -29,15 +34,23 @@ internal class FranchiseRepository : IFranchiseRepository, IDisposable
         }
     }
 
+    /// <inheritdoc/>
     public async Task<IEnumerable<Franchise>> GetAllAsync() => await _context.Franchises.ToListAsync();
+
+    /// <inheritdoc/>
     public async Task<Franchise?> GetByIdAsync(Guid id)
     {
         var franchise = await _context.Franchises.FindAsync(id);
         return franchise;
     }
 
+    /// <inheritdoc/>
     public void Save() => _context.SaveChanges();
+
+    /// <inheritdoc/>
     public async Task SaveAsync() => await _context.SaveChangesAsync();
+
+    /// <inheritdoc/>
     public Franchise? Update(Franchise entity)
     {
         _context.Franchises.Update(entity);

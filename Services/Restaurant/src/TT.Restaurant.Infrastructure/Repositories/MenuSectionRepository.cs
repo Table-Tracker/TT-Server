@@ -19,7 +19,7 @@ internal class MenuSectionRepository : IMenuSectionRepository, IDisposable
 
     public async Task AddAsync(MenuSection entity) => await _context.MenuSections.AddAsync(entity);
     public void Delete(MenuSection entity) => _context.MenuSections.Remove(entity);
-    public void DeleteByIdAsync(Guid id)
+    public void DeleteById(Guid id)
     {
         var section = _context.MenuSections.Find(id);
 

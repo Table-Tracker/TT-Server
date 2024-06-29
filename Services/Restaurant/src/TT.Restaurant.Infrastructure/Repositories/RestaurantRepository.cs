@@ -18,7 +18,7 @@ internal class RestaurantRepository : IRestaurantRepository, IDisposable
 
     public async Task AddAsync(Domain.Models.Restaurant entity) => await _context.Restaurants.AddAsync(entity);
     public void Delete(Domain.Models.Restaurant entity) => _context.Restaurants.Remove(entity);
-    public void DeleteByIdAsync(Guid id)
+    public void DeleteById(Guid id)
     {
         var restaurant = _context.Restaurants.Find(id);
 

@@ -19,7 +19,7 @@ internal class MenuItemRepository : IMenuItemRepository, IDisposable
 
     public async Task AddAsync(MenuItem entity) => await _context.MenuItems.AddAsync(entity);
     public void Delete(MenuItem entity) => _context.MenuItems.Remove(entity);
-    public void DeleteByIdAsync(Guid id)
+    public void DeleteById(Guid id)
     {
         var map = _context.MenuItems.Find(id);
 
